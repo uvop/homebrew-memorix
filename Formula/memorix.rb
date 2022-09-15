@@ -1,5 +1,5 @@
 cask "memorix" do
-    version "{{{VERSION}}}"
+    version "1.0.0-rc.10"
   
     if Hardware::CPU.intel?
         url "https://github.com/uvop/memorix/releases/download/v1.0.0-rc.10/memorix-macos-x64.tar.gz"
