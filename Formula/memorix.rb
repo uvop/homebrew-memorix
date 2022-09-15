@@ -1,4 +1,4 @@
-cask "memorix" do
+class Memorix < Formula
     version "1.0.0-rc.10"
   
     if Hardware::CPU.intel?
