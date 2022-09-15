@@ -1,4 +1,4 @@
-cask "memorix" do
+class memorix < Formula
     version "{{{VERSION}}}"
   
     if Hardware::CPU.intel?
