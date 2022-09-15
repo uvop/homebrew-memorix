@@ -1,12 +1,12 @@
 class Memorix < Formula
-    version "1.0.0-rc.10"
+    version "1.0.0-rc.13"
   
     if Hardware::CPU.intel?
         url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64.tar.gz"
-        sha256 "143e8bf185e748be1c9384228a42677698cb737452b3d353fd8e06f0a91dd9fa"
+        sha256 "a83bdb80f0aa984a8b1ba189e043770aa59433e7696583a817c21d2bc3e1e0cc"
     else
         url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64.tar.gz"
-        sha256 "143e8bf185e748be1c9384228a42677698cb737452b3d353fd8e06f0a91dd9fa"
+        sha256 "a83bdb80f0aa984a8b1ba189e043770aa59433e7696583a817c21d2bc3e1e0cc"
     end
   
     desc "Memorix - CLI"
