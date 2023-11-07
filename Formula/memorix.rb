@@ -1,17 +1,17 @@
 class Memorix < Formula
-    version "1.4.16"
+    version "1.4.18"
   
     if OS::linux?
         url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-linux-x64.tar.gz"
-        sha256 "a5fa48e361e948b5f49f325cf7d2fc62a5ed17b926fd4002439e9c52eb100145"
+        sha256 "6b99af10d0686a191e14df6560d22461988b265d4f829c7b42ce4eaf2bb84031"
     else
         if Hardware::CPU.intel?
             url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64.tar.gz"
-            sha256 "ce37b2acd381e0fca0db48327ec3da0500b543be392596d268a525b4a20d6caa"
+            sha256 "e98dfc5f95ca0f48a52b4a296ee1b8df43d45f2b55123cd6938224b6a176c160"
         else
             # For now m1 will use x64
             url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64.tar.gz"
-            sha256 "ce37b2acd381e0fca0db48327ec3da0500b543be392596d268a525b4a20d6caa"
+            sha256 "e98dfc5f95ca0f48a52b4a296ee1b8df43d45f2b55123cd6938224b6a176c160"
         end
     end
   
