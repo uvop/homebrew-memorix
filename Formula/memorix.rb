@@ -1,14 +1,14 @@
 class Memorix < Formula
   desc "Memorix - CLI"
   homepage "https://github.com/uvop/memorix"
-  version "0.1.0"  # Will be auto-updated by the GitHub Action
+  version "2.0.0-rc2"  # Will be auto-updated by the GitHub Action
   license "MIT"    # Add your license
   
   # macOS binaries (both ARM64 and x86_64)
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/username/your-repo/releases/download/v#{version}/memorix-macos-arm64"
-      sha256 "WILL_BE_UPDATED_AUTOMATICALLY"  # Auto-updated by the action
+      url "https://github.com/uvop/memorix/archive/refs/tags/v2.0.0-rc2.tar.gz"
+      sha256 "1cba309186509ced57d54f445a0e1ec0e71f93d98a2e103ed4fafa7f7875bdc7"  # Auto-updated by the action
     else
       url "https://github.com/username/your-repo/releases/download/v#{version}/memorix-macos-x64"
       sha256 "WILL_BE_UPDATED_AUTOMATICALLY"  # Auto-updated by the action
