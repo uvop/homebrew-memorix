@@ -1,4 +1,5 @@
 class Memorix < Formula
+  desc "Memorix - CLI"
   homepage "https://github.com/uvop/memorix"
   version "0.1.0"  # Will be auto-updated by the GitHub Action
   license "MIT"    # Add your license
@@ -19,10 +20,9 @@ class Memorix < Formula
     url "https://github.com/username/your-repo/releases/download/v#{version}/memorix-linux-x64"
     sha256 "WILL_BE_UPDATED_AUTOMATICALLY"  # Auto-updated by the action
   end
-
   def install
     # Install the binary with the correct name
-    bin.install Dir["memorix*"].first => "memorix"
+    bin.install "memorix"
     
     # Optional: Install completion scripts
     # bash_completion.install "completions/your_binary.bash" => "your_binary"
