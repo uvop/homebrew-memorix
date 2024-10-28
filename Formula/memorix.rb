@@ -1,24 +1,41 @@
 class Memorix < Formula
-    version "1.5.13"
+  homepage "https://github.com/uvop/memorix"
+  version "0.1.0"  # Will be auto-updated by the GitHub Action
+  license "MIT"    # Add your license
   
-    if OS::linux?
-        url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-linux-x64.tar.gz"
-        sha256 "678f9c47075d8dd2ce945559de72d36af3e52d4057bc4ffc6dcb42b13d0c2dd9"
+  # macOS binaries (both ARM64 and x86_64)
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/username/your-repo/releases/download/v#{version}/memorix-macos-arm64"
+      sha256 "WILL_BE_UPDATED_AUTOMATICALLY"  # Auto-updated by the action
     else
-        if Hardware::CPU.intel?
-            url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64.tar.gz"
-            sha256 "64282c78a08cab2407b3a4caf79db3d80bae0e7ee2b83ae8b08c80cffab74f3b"
-        else
-            # For now m1 will use x64
-            url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64.tar.gz"
-            sha256 "64282c78a08cab2407b3a4caf79db3d80bae0e7ee2b83ae8b08c80cffab74f3b"
-        end
+      url "https://github.com/username/your-repo/releases/download/v#{version}/memorix-macos-x64"
+      sha256 "WILL_BE_UPDATED_AUTOMATICALLY"  # Auto-updated by the action
     end
+  end
   
-    desc "Memorix - CLI"
-    homepage "https://github.com/uvop/memorix"
-  
-    def install
-        bin.install "memorix"
-    end
+  # Linux binary (x86_64)
+  on_linux do
+    url "https://github.com/username/your-repo/releases/download/v#{version}/memorix-linux-x64"
+    sha256 "WILL_BE_UPDATED_AUTOMATICALLY"  # Auto-updated by the action
+  end
+
+  def install
+    # Install the binary with the correct name
+    bin.install Dir["your_binary*"].first => "your_binary"
+    
+    # Optional: Install completion scripts
+    # bash_completion.install "completions/your_binary.bash" => "your_binary"
+    # zsh_completion.install "completions/your_binary.zsh" => "_your_binary"
+    # fish_completion.install "completions/your_binary.fish"
+    
+    # Optional: Install man pages
+    # man1.install "your_binary.1"
+  end
+
+  test do
+    # Add tests to verify the installation
+    assert_match "v#{version}", shell_output("#{bin}/memorix --version")
+    # Add more test cases as needed
+  end
 end
