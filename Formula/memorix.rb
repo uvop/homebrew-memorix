@@ -22,7 +22,7 @@ class Memorix < Formula
 
   def install
     # Install the binary with the correct name
-    bin.install Dir["your_binary*"].first => "your_binary"
+    bin.install Dir["memorix*"].first => "memorix"
     
     # Optional: Install completion scripts
     # bash_completion.install "completions/your_binary.bash" => "your_binary"
