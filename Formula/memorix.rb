@@ -1,7 +1,7 @@
 class Memorix < Formula
   desc "Memorix - CLI"
   homepage "https://github.com/uvop/memorix"
-  version "2.0.0-rc7"
+  version "2.0.0-rc8"
   license "MIT"
 
   on_macos do
@@ -16,7 +16,7 @@ class Memorix < Formula
   
   on_linux do
     url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-linux-x64"
-    sha256 "fc99fb8d7bdbb1a0d0e277644dfcf75c2d5e357106260c1c94af3829c501e2e6"
+    sha256 "68b14222390932edb9adc743ef2f4321a0ad1a85f949b164bf3500c362618ac4"
   end
 
   def install
