@@ -1,22 +1,22 @@
 class Memorix < Formula
   desc "Memorix - CLI"
   homepage "https://github.com/uvop/memorix"
-  version "2.1.0-rc3"
+  version "2.1.0-rc4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-arm64"
-      sha256 "3f7e738ada91d048da381971da69d617bbb315c30e2fb694bed78f9ff9f56d44"
+      sha256 "ee7123533922e96c4590664f0822c8abb3c74438c5d7733b3c840887eaee114b"
     else
       url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-macos-x64"
-      sha256 "99e06656e996119635f5338b9338a7182fa4a6739e41ddb1f3704c86de34c2eb"
+      sha256 "253b6fd49744658cb58248c28ea6c24dbeff6dcb2be52dbd845dabcf966f514e"
     end
   end
   
   on_linux do
     url "https://github.com/uvop/memorix/releases/download/v#{version}/memorix-linux-x64"
-    sha256 "803cf1ea8eeae624801b9e698c7120c95d89d9a4eb31aa9d7237d8f663485308"
+    sha256 "b888e4c390de101e33e3c9f7ec36eab5adeac345bf172e1b8a54e1bb381fc2f4"
   end
 
   def install
